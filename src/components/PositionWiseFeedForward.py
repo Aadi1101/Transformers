@@ -10,6 +10,7 @@ class PositionWiseFeedForward(nn.Module):
             self.fc1 = nn.Linear(d_model, d_ff)
             self.fc2 = nn.Linear(d_ff, d_model)
             self.relu = nn.ReLU()
+            logging.info("Completed with Position Wise Feed Forward")
 
         def forward(self, x):
             logging.info('Started with Position Wise Feed Forward')
