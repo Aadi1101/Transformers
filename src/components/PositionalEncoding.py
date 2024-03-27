@@ -21,7 +21,8 @@ class PositionalEncoding(nn.Module):
             logging.info("Completed with Positional Encoding")
             
         def forward(self, x):
-            logging.info("Started with Positional Encoding")
+            logging.info(f"In Positional Encoding each element in the input tensor {x} is added to the corresponding positional encoding value, with the positional encodings adjusted to match the length of the input sequence")
+            logging.info("Completed with Positional Encoding")
             return x + self.pe[:, :x.size(1)]
     
     except Exception as e:

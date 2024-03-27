@@ -10,10 +10,13 @@ class PositionWiseFeedForward(nn.Module):
             self.fc1 = nn.Linear(d_model, d_ff)
             self.fc2 = nn.Linear(d_ff, d_model)
             self.relu = nn.ReLU()
-            logging.info("Completed with Position Wise Feed Forward")
+            
 
         def forward(self, x):
-            logging.info('Started with Position Wise Feed Forward')
+            logging.info('Position Wise Feed Forward starts with 1st dense layer')
+            logging.info('In Position Wise Feed Forward passed through ReLU activation function')
+            logging.info('In Position Wise Feed Forward added 2nd dense layer')
+            logging.info("Completed with Position Wise Feed Forward")
             return self.fc2(self.relu(self.fc1(x)))
     
     except Exception as e:
