@@ -14,10 +14,10 @@ class EncoderLayer(nn.Module):
             self.self_attn = MultiHeadAttention(d_model, num_heads)
             logging.info("In Encoding started with Position Wise Feed Forward")
             self.feed_forward = PositionWiseFeedForward(d_model, d_ff)
-            logging.info("Added 2 Normalization Layer.")
+            logging.info("In Encoding Added 2 Normalization Layer.")
             self.norm1 = nn.LayerNorm(d_model)
             self.norm2 = nn.LayerNorm(d_model)
-            logging.info("Added Dropout in Encoding")
+            logging.info("In Encoding Added Dropout in Encoding")
             self.dropout = nn.Dropout(dropout)
             
         def forward(self, x, mask):
